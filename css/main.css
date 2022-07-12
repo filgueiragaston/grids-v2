@@ -1,0 +1,130 @@
+/* unidades de medidas rem y em son unidades de medidas RELATIVAS */
+
+/* unidades de medida: 
+     1rem = 16pixeles  */ 
+
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* estilos generales */
+body{
+    background-color: #F8CED8;
+}
+/*estilos header*/
+header h1{
+    text-align: center;
+    font-size: 2.3rem;
+    text-shadow: 2px 2px whitesmoke;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: whitesmoke;
+    border-radius: 2rem;
+    font-weight: bold;
+    box-shadow: 1px 1px;
+
+}
+.sectionNosotros{
+    display: none;
+}
+
+/* estilos main */
+.mainNosotros .mainP span{
+    color: whitesmoke;
+}
+.mainNosotros{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1.5fr 1fr 1fr 0.5fr;
+    grid-template-areas: "mainP mainP"
+                         "imagen1 imagen2"
+                         "imagen3 imagen4"
+                         "parrafo parrafo";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.mainP{
+    grid-area: mainP;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.imagen1{
+    grid-area: imagen1;
+}
+
+.imagen2{
+    grid-area: imagen2;
+}
+
+.imagen3{
+    grid-area: imagen3;
+}
+
+.imagen4{
+    grid-area: imagen4;
+}
+
+.parrafo{
+    grid-area: parrafo;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* estilos footer */
+footer{
+    margin-top: 2rem;
+}
+
+footer p{
+    text-align: center;
+}
+
+/* media queries */
+@media screen and (min-width:600px){
+    .sectionNosotros{
+        display: block;
+        grid-area: img;
+    }
+    .mainNosotros{
+        grid-template-columns: auto auto;
+        grid-template-rows: 0.5fr 1fr 0.3fr 0.3fr;
+        grid-template-areas: "mainP mainP mainP mainP"
+                             "img img img img"
+                             "imagen1 imagen2 imagen3 imagen4"
+                             "parrafo parrafo parrafo parrafo";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .mainNosotros{
+        grid-template-columns: auto auto;
+        grid-template-rows: 0.5fr 1fr 0.3fr 0.3fr;
+        grid-template-areas: "mainP mainP img img"
+                             "imagen1 imagen2 imagen3 imagen4"
+                             "parrafo parrafo parrafo parrafo";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    }
+}
